@@ -1,1 +1,14 @@
-<!doctype html><html><body><h1>Dashboard</h1><a href="{{ url_for('add') }}">Add Post</a> | <a href="{{ url_for('logout') }}">Logout</a><table><tr><th>Title</th><th>Actions</th></tr>{% for post in posts %}<tr><td>{{ post.title }}</td><td><a href="{{ url_for('edit', post_id=post.id) }}">Edit</a> | <a href="{{ url_for('delete', post_id=post.id) }}">Delete</a></td></tr>{% endfor %}</table></body></html>
+<!doctype html>
+<html><body>
+<h1>Dashboard</h1>
+<a href="{{ url_for('add') }}">Add Post</a> | <a href="{{ url_for('logout') }}">Logout</a>
+<table>
+  <tr><th>Title</th><th>Actions</th></tr>
+  {% for post in posts %}
+   <tr>
+     <td>{{ post.title }}</td>
+     <td><a href="{{ url_for('edit', post_id=post.id) }}">Edit</a> | <a href="{{ url_for('delete', post_id=post.id) }}">Delete</a></td>
+   </tr>
+  {% endfor %}
+</table>
+</body></html>
