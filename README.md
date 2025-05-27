@@ -22,7 +22,7 @@ templates (index.htm, login.html, dashboard.html, add.html, and edit.html)
 **Database Model Details**
 The application uses two main models:
 
-1. **User**
+1.**User**
 'id' (Integer, Primary Key)  
 'username' (String, unique)
 'password' (String, plaintext for this assignment; note: in production, always hash passwords)
